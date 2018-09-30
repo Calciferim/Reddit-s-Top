@@ -4,5 +4,13 @@ import com.google.gson.annotations.SerializedName
 
 data class Top(
         @SerializedName("kind") val kind: String,
-        @SerializedName("data") val data: Data
+        @SerializedName("topData") val topData: TopData
+)
+
+data class TopData(
+        @SerializedName("modhash") val modhash: String,
+        @SerializedName("dist") val dist: Int,
+        @SerializedName("children") val children: ArrayList<Post>,
+        @SerializedName("after") val after: String,
+        @SerializedName("before") val before: Any
 )
