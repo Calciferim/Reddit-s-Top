@@ -3,8 +3,8 @@ package com.calcifer.redditstop.models
 import com.google.gson.annotations.SerializedName
 
 data class Post(
-        @SerializedName("kind") val kind: String,
-        @SerializedName("topData") val postData: PostData
+        @SerializedName("kind") val kind: String?,
+        @SerializedName("data") val postData: PostData?
 )
 
 data class PostData(

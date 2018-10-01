@@ -7,7 +7,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-import retrofit2.http.QueryMap
 
 const val BASE_URL = "https://www.reddit.com/"
 
@@ -24,7 +23,7 @@ interface RedditApiService {
                     .baseUrl(BASE_URL)
                     .build()
 
-            return retrofit.create(RedditApiService::class.java);
+            return retrofit.create(RedditApiService::class.java)
         }
     }
 }
